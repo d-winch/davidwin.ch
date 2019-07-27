@@ -23,8 +23,8 @@
 		});
 
 	// Play initial animations on page load.
-		$window.on('load', function() {
-			window.setTimeout(function() {
+		$window.on('load', () => {
+			window.setTimeout(() => {
 				$body.removeClass('is-preload');
 			}, 100);
 		});
@@ -128,7 +128,7 @@
 					'<span class="title">' + $('#logo').html() + '</span>' +
 				'</div>'
 			)
-				.appendTo($body);
+				.appendTo($('body'));
 
 		// Panel.
 			$header
@@ -139,7 +139,7 @@
 					resetScroll: true,
 					resetForms: true,
 					side: 'right',
-					target: $body,
+					target: $('body'),
 					visibleClass: 'header-visible'
 				});
 
@@ -155,5 +155,6 @@
 
 			}
 		});
+
 
 })(jQuery);

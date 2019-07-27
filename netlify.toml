@@ -1,0 +1,6 @@
+## COMMENT: This rule redirects to Digital Ocean hosted Django website
+[[redirects]]
+  from = "/django"
+  to = "http://46.101.192.188/"
+  status = 200
+  force = true # COMMENT: ensure that we always redirect

@@ -11,6 +11,15 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<script async defer src="https://buttons.github.io/buttons.js"></script>
+		<!-- Scripts -->
+		<script src="assets/js/jquery.min.js"></script>
+		<script src="assets/js/jquery.scrollex.min.js"></script>
+		<script src="assets/js/jquery.scrolly.min.js"></script>
+		<script src="assets/js/browser.min.js"></script>
+		<script src="assets/js/breakpoints.min.js"></script>
+		<script src="assets/js/util.js"></script>
+		<script src="assets/js/main.js" defer></script>
+		<!--<script src="assets/js/activescroll.js"></script>-->
 	</head>
 	<body class="is-preload">
 
@@ -147,7 +156,7 @@
 							<section id="contact">
 								<div class="container">
 									<h3>Contact Me</h3>
-									<p>Integer eu ante ornare amet commetus vestibulum blandit integer in curae ac faucibus integer non. Adipiscing cubilia elementum integer. Integer eu ante ornare amet commetus.</p>
+									<p>If you would like to get in contact with me for further details or to discuss projects, please use the following form.</p>
 									<form name="contact-form" id="contact-form" method="post" action="#">
 										<div class="row gtr-uniform">
 											<div class="col-6 col-12-xsmall"><input type="text" name="name" id="name" placeholder="Name" required/></div>
@@ -162,12 +171,35 @@
 											</div>
 										</div>
 									</form>
+									<div id="submission-success" style="display: none;">
+										<h3 style="text-align: center">Your message has been sent successfully</br>Thank you</h3>
+										<svg id="checkmark" class="checkmark" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 52 52">
+											<circle class="checkmark__circle" cx="26" cy="26" r="250" fill="none" />
+											<path class="checkmark__check" fill="none" d="M14.1 27.2l7.1 7.2 16.7-16.8" />
+										</svg>
+									</div>
+									<div id="submission-failure" style="display: none;">
+										<h3 style="text-align: center">There was an issue processing your submission</br>Please try again</h3>
+									</div>
+
+									<!--<script>
+											$("button").click(function () {
+												$(".trigger").toggleClass("drawn")
+											});
+									</script>-->
+
+
 								</div>
 							</section>
 
 							<script>
 								var form = document.getElementById("contact-form");
+								var form_success = document.getElementById("submission-success");
+								var form_error = document.getElementById("submission-failure");
+								form_success.style.display = "none";
+								form_error.style.display = "none";
 								form.onsubmit = function(event) {
+
 									event.preventDefault();
 									var name = form.name.value;
 									var email = form.email.value;
@@ -184,9 +216,17 @@
 									xhr.open("POST", "https://7xq2sffsc2.execute-api.eu-west-2.amazonaws.com/Initial/");
 									xhr.setRequestHeader("Content-type", 'application/json');
 									xhr.onload = function () {
-										if(xhr.status == 200) {
-											alert(`Loaded: ${xhr.status} ${xhr.response}`);
+										if (xhr.status == 200) {
+											//alert(`Loaded 200: ${xhr.status} ${xhr.response}`);
+											form.style.display = "none";
+											form_success.style.display = "block";
 										}
+									};
+									xhr.onerror = function (event) {
+										form_error.style.display = "block";
+									};
+									xhr.onabort = function (event) {
+										form_error.style.display = "block";
 									};
 									data = JSON.stringify(formData);
 									xhr.send(data);
@@ -536,15 +576,6 @@ print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
 					</section>
 
 			</div>
-
-		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.scrollex.min.js"></script>
-			<script src="assets/js/jquery.scrolly.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/activescroll.js"></script>
 
 	</body>
 
