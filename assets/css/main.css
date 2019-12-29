@@ -3040,7 +3040,7 @@ li span.list-text{
 					#titleBar .toggle:before {
 						-moz-osx-font-smoothing: grayscale;
 						-webkit-font-smoothing: antialiased;
-						font-family: FontAwesome;
+						font-family: 'Font Awesome 5 Free';
 						font-style: normal;
 						font-weight: normal;
 						text-transform: none !important;
@@ -3059,6 +3059,7 @@ li span.list-text{
 						top: 0;
 						width: 64px;
 						right: 0;
+						font-weight: 900;
 					}
 
 			body.header-visible #wrapper, body.header-visible #titleBar {
