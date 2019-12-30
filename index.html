@@ -339,14 +339,16 @@
 										</div>
 									</form>
 									<div id="submission-success" style="display: none;">
-										<h3 style="text-align: center">Your message has been sent successfully<br />Thank you</h3>
+										<h3 style="text-align: center">Your message has been sent successfully</h3>
+										<p>Thank you</p>
 										<svg id="checkmark" class="checkmark" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 52 52">
 											<circle class="checkmark__circle" cx="26" cy="26" r="250" fill="none" />
 											<path class="checkmark__check" fill="none" d="M14.1 27.2l7.1 7.2 16.7-16.8" />
 										</svg>
 									</div>
 									<div id="submission-failure" style="display: none;">
-										<h3 style="text-align: center">There was an issue processing your submission<br />Please try again</h3>
+										<h3 style="text-align: center">There was an issue processing your submission</h3>
+										<p>Please try again</p>
 									</div>
 
 									<!--<script>
@@ -386,6 +388,7 @@
 										if (xhr.status == 200) {
 											//alert(`Loaded 200: ${xhr.status} ${xhr.response}`);
 											form.style.display = "none";
+											form_error.style.display = "none";
 											form_success.style.display = "block";
 										}
 									};
@@ -736,7 +739,7 @@ print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
 					<section id="footer">
 						<div class="container">
 							<ul class="copyright">
-								<li>&copy; Untitled. All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+								<li>David Winch &copy; All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
 							</ul>
 						</div>
 					</section>
