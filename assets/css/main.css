@@ -2179,6 +2179,9 @@ input, select, textarea {
 			height: 20em;
 			border-radius: 0;
 		}
+			.image.main.mobile {
+				display: none;
+			}
 
 			.image.main img {
 				border-radius: 0;
@@ -2805,7 +2808,7 @@ li span.list-text{
 	}
 
 		#main > section > .container {
-			padding: 6em 0 4em 0;
+			padding: 2em 0 1em 0;
 		}
 
 		#main > section:first-child {
@@ -2819,7 +2822,7 @@ li span.list-text{
 		border-top: 0;
 		color: #c0c0c0;
 		overflow: hidden;
-		padding: 4em 0 2em 0;
+		padding: 1em 0;
 	}
 
 		#footer .copyright {
@@ -2879,7 +2882,7 @@ li span.list-text{
 		/* Main */
 
 			#main > section > .container {
-				padding: 4em 0 2em 0;
+				padding: 1em 0;
 			}
 
 	}
@@ -2938,6 +2941,13 @@ li span.list-text{
 
 			.image.main {
 				height: 20em;
+			}
+
+			.image.main.desktop {
+				display: none;
+			}
+			.image.main.mobile {
+				display: block;
 			}
 
 		/* Header */
@@ -3117,6 +3127,14 @@ li span.list-text{
 
 			.image.main {
 				height: 12em;
+			}
+
+			.image.main.desktop {
+				display: none;
+			}
+
+			.image.main.mobile {
+				display: block;
 			}
 
 		/* Section/Article */
