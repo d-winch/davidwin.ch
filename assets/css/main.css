@@ -2392,6 +2392,21 @@ li span.list-text{
 			width: 2.5em;
 		}
 
+		ul.feature-icons svg.tailwind {
+			background: #4acaa8;
+			border-radius: 100%;
+			color: #ffffff;
+			display: block;
+			height: 2.5em;
+			left: 0;
+			line-height: 2.5em;
+			position: absolute;
+			text-align: center;
+			top: 0;
+			width: 2.5em;
+			padding:10px;
+		}
+
 /* Icons */
 
 	ul.icons {
